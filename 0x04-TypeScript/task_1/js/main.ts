@@ -30,13 +30,15 @@ const director1: Director = {
 };
 console.log(director1);
 
+// Interface for the function
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
+// Classic function syntax as expected by ALX
 function printTeacher(firstName: string, lastName: string): string {
-  return firstName.charAt(0) + ". " + lastName;
+  return `${firstName.charAt(0)}. ${lastName}`;
 }
 
-console.log(printTeacher("John", "Doe"));
-console.log(printTeacher("Alice", "Smith"));
+// Example usage
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
