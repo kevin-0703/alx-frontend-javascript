@@ -42,3 +42,26 @@ function printTeacher(firstName: string, lastName: string): string {
 
 // Example usage
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
+
+interface StudentClassConstructor {
+  firstName: string;
+  lastName: string;
+}
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+class StudentClass implements StudentClassInterface {
+  private firstName: string;
+  private lastName: string;
+  constructor({ firstName, lastName }: StudentClassConstructor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  workOnHomework(): string {
+    return "Currently working";
+  }
+  displayName(): string {
+    return this.firstName;
+  }
+}
